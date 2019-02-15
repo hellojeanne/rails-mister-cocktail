@@ -13,12 +13,10 @@
 
   <body>
 
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <%= link_to "Add a cocktail", "", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Index", "", class: "navbar-wagon-item navbar-wagon-link" %>
-   </div>
-
+<div class="navbar-wagon">
+    <%= link_to "Index", "/cocktails", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Add a cocktail", "/cocktails/new", class: "navbar-wagon-item navbar-wagon-link" %>
+</div>
 
     <%= yield %>
       <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
