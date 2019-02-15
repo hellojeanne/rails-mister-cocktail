@@ -6,16 +6,18 @@
   <div class="container">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-      <div class="col-md-4">
-        <div class="card image" style="background-image: url('cocktail.jpg');">
-          <div class="flat-card-image">
-            <div class="flat-card-content content-only">
-              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <div class="col-md-4">
+          <div class="card-cocktail">
+            <%= link_to "", cocktail_path(cocktail) %>
+            <%= cl_image_tag(cocktail.photo) %>
+            <div class="card-cocktail-infos">
+              <div>
+                <h2><%= cocktail.name %></h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-        <% end %>
+      <% end %>
     </div>
   <br><br>
       <div class="text-center">
@@ -24,3 +26,4 @@
       <br>
   </div>
 </div>
+
